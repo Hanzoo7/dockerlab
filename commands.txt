@@ -1,0 +1,33 @@
+docker build . -t monimage:1
+
+docker image ls
+
+docker history monimage:1
+
+docker volume create monvolume1
+
+docker inspect monvolume1
+
+docker run -d -v monvolume1:/external -p 8080:2368 monimage:1
+
+docker run -d -v monvolume1:/external -p 8081:2368 monimage:1
+
+docker run -d -v monvolume1:/external -p 8082:2368 monimage:1
+
+docker run -d -v ./mondev:/external -p 8083:2368 monimage:1
+
+docker ps
+
+docker inspect ****
+
+docker exec **** pwd
+
+docker exec **** ls /external
+
+docker stop **** 
+
+docker rm ****
+
+docker rmi monimage:1
+
+docker compose up -d
